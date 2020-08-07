@@ -1,0 +1,98 @@
+.navbar{
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+background-color: #99aae9;
+color: white;
+
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display:flex;
+}
+
+.navbar-links li {
+   list-style: none; 
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1.8rem;
+    display:block;
+    font-size: 1.5rem;
+    
+ }
+
+ .navbar-links li:hover{
+     background-color:#444
+ }
+
+ .brand-logo{
+     height: 5rem;
+     padding-left:1rem;
+     padding-top:1rem;
+ }
+
+ @media (max-width:720px){
+    .brand-logo{
+        height: 3.5rem;
+    }
+    .navbar-links li a {
+        padding: 1.2rem;
+        font-size: 1rem;
+        
+     }
+ }
+
+ .search-box:hover > .search-text{
+    width: 35vw;
+    padding: 0 6px;
+}
+
+.search-box > .search-button:hover{
+    background-color: white; /*Kolla in detta*/
+}
+
+
+ .search-box{
+     background-color: #444;
+     height: 40px;
+     border-radius: 40px;
+     padding-top: 5px;
+     padding-bottom: 45px;
+     padding-right: 5px;
+     padding-left: 5px;
+     
+ }
+
+ .search-button {
+     text-decoration: none;
+     color:#e84118;
+     float: right;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     background: #444;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition-delay: 0.1s;
+     
+ }
+
+ .search-text{
+     border:none;
+     background:none;
+     outline: none;
+     padding: 0;
+     color: white;
+     font-size: 16px;
+     transition: 0.4s;
+     line-height: 40px;
+     width: 0px;
+ }
+

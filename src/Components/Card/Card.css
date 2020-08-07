@@ -1,0 +1,50 @@
+.card{
+    width: 320px;
+    height: 450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.4s;
+    position: relative;
+    
+
+}
+
+
+.card:hover{
+    transform: translateY(-20px);
+}
+
+.contentBox{
+color: green;
+
+}
+.imgBox{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    
+}
+.contentBox{
+    position: absolute;
+    margin-top: 30px;
+    left:30%;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+
+}
+.card:hover .pokemonImg {
+    animation: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    
+
+}
+
+@keyframes bounce {
+    0%   {transform: translateY(0px);}
+    50%  {transform: translateY(-15px);}
+    100% {transform: translateY(0px);}
+  }
