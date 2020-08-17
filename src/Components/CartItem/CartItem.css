@@ -1,0 +1,79 @@
+.Cart .CartItem{
+    display: flex;
+    flex-direction: row;
+    visibility: hidden;
+    animation: fadeIn 0.3s forwards;
+    animation-delay: fadeIn 0.8s;
+    padding: 10px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    transition: 0.6s;
+    border-radius: 7px;
+}
+.Cart .CartItem:hover{
+    background: rgb(186, 224, 255);
+
+}
+
+
+.Cart .CartItem{
+    display: flex;
+    flex-direction: row;
+    visibility: hidden;
+    animation: fadeIn 0.3s forwards;
+    animation-delay: 0.8s;
+    padding: 10px;
+    border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+      }
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
+  }
+
+.CartImgBox{
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: rgb(235, 235, 235);
+    
+    
+    
+}
+
+.CartImgBox img{
+    width: 80px;
+}
+
+.NameAndPrice{
+    margin: auto;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Quantity{
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.Cart .CartItem a{
+    border-radius: 1000%;        
+    background: #ffd7a9;
+    padding: 3px 6px 3px 6px;
+    margin: 4px;
+    text-decoration: none;
+    color: #111;
+    transition: 0.3s;
+}
+
+.Cart .CartItem a:hover{
+    background: #ffc684;
+    cursor: pointer;
+
+}

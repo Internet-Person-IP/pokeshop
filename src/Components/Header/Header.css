@@ -96,3 +96,13 @@ color: white;
      width: 0px;
  }
 
+
+ .navbar .CartButton .amountInCart{
+    display: inline-block; 
+    margin: 1px;
+    padding: 3px 8px 3px 8px;
+    border-radius: 1000%;
+    color: black;
+    background: rgb(255, 255, 255);
+    font-size: 1.3rem;
+ }
