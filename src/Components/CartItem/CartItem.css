@@ -40,7 +40,7 @@
     justify-content: center;
     border-radius: 15px;
     background-color: rgb(235, 235, 235);
-    
+    margin:5px;
     
     
 }
@@ -58,15 +58,19 @@
 }
 
 .Quantity{
-    margin-top: auto;
-    margin-bottom: 10px;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: row;
 }
+
+
+
 
 .Cart .CartItem a{
     border-radius: 1000%;        
     background: #ffd7a9;
     padding: 3px 6px 3px 6px;
-    margin: 4px;
+    margin: 0 3px 0 3px;
     text-decoration: none;
     color: #111;
     transition: 0.3s;
