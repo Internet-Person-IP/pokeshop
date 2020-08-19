@@ -5,3 +5,12 @@
 
 }
 
+.PokemonList .card{
+    animation: Down 1s forwards;
+}
+
+@keyframes Down {
+    from  {transform: translateY(-30px);}
+    to {transform: translateY(0px);}
+  }
+  
