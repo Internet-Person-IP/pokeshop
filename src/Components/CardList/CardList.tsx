@@ -13,7 +13,7 @@ const  CardList:FC<Props> = ({PokemonList, UpdateCart, SearchQuery}) =>  {
 
   return (
     <div className="PokemonList" >
-      {PokemonList.filter(({Name})=>  Name.toLowerCase().includes(SearchQuery))
+      {PokemonList.filter(({Name})=>  Name.toLowerCase().includes(SearchQuery.toLowerCase()))
       .map(({PokemonID,Name,ATK,DEF,HP})=> {
         return(<Card key={PokemonID} Id={PokemonID} Name={Name} ATK={ATK} DEF={DEF} HP={HP} UpdateCart={UpdateCart}/>)
       })
