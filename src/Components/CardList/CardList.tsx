@@ -5,16 +5,14 @@ import "./CardList.css"
 interface Props{
   PokemonList: Pokemon[];
   UpdateCart: (Cart: CartItem,IncOrDec: number) => void;
-  SearchQuery: string;
 
 }
 
-const  CardList:FC<Props> = ({PokemonList, UpdateCart, SearchQuery}) =>  {
+const  CardList:FC<Props> = ({PokemonList, UpdateCart}) =>  {
 
   return (
     <div className="PokemonList" >
-      {PokemonList.filter(({Name})=>  Name.toLowerCase().includes(SearchQuery.toLowerCase()))
-      .map(({PokemonID,Name,ATK,DEF,HP})=> {
+      {PokemonList.map(({PokemonID,Name,ATK,DEF,HP})=> {
         return(<Card key={PokemonID} Id={PokemonID} Name={Name} ATK={ATK} DEF={DEF} HP={HP} UpdateCart={UpdateCart}/>)
       })
     }
