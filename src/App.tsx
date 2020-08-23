@@ -21,7 +21,7 @@ const  App = () =>  {
     console.log(process.env.REACT_APP_POKEMON_API)
 
     const API:string =process.env.REACT_APP_POKEMON_API != null ?
-    `${process.env.REACT_APP_POKEMON_API}?q=${Search}&sort=${SortBy}&direction=${OrderBy}`
+    `${process.env.REACT_APP_POKEMON_API}?q=${Search}&sortby=${SortBy}&orderby=${OrderBy}`
     : ""
     
     axios.get(API)
