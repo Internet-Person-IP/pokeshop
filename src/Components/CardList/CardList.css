@@ -29,8 +29,22 @@
     background-color: #c9a2b8;
     padding: 12px;
     border-radius: 15px;
-
+    visibility: hidden;
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 500ms;
   }
+
+  @keyframes fadeIn {
+    0% {
+        opacity: 0;
+      }
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
+  }
+  
+
   .pagination > .active > a{
     background-color: #e6beb0;
     color: black;
