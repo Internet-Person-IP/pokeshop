@@ -16,7 +16,7 @@ interface Props{
 const  CardList:FC<Props> = ({PokemonList, UpdateCart,AmountOfPokemon, Page,ItemsPerPage,SetPage}) =>  {
 
   return (
-    <div>
+    <div className="listandpagination">
     <div className="PokemonList" >
       {PokemonList.map(({PokemonID,Name,ATK,DEF,HP})=> {
         return(<Card key={PokemonID} Id={PokemonID} Name={Name} ATK={ATK} DEF={DEF} HP={HP} UpdateCart={UpdateCart}/>)
@@ -25,6 +25,7 @@ const  CardList:FC<Props> = ({PokemonList, UpdateCart,AmountOfPokemon, Page,Item
     </div>
     <ReactPaginate
           previousLabel={'previous'}
+          nextClassName={"nextPage"}
           nextLabel={'next'}
           breakLabel={'...'}
           breakClassName={'break-me'}
