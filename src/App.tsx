@@ -14,14 +14,16 @@ const  App = () =>  {
   const [Search , setSearch] = useState<string>("");
   const [SortBy, setSortBy] = useState<string>("PokemonID");
   const [OrderBy, setOrderBy] = useState<string>("asc");
+  const [Page, SetPage] = useState<number>(1);
+  const [ItemsPerPage, SetItemPerPage] = useState<number>(21);
+  const AmountOfPokemon :number = 151;
   let QueryTimeOut: NodeJS.Timeout; 
-  /*const [Page, SetPage] = useState<number>(1);
-  const [ItemsPerPage, SetItemPerPage] = useState<number>(20);*/
+
   useEffect(() => {
     console.log(process.env.REACT_APP_POKEMON_API)
 
     const API:string =process.env.REACT_APP_POKEMON_API != null ?
-    `${process.env.REACT_APP_POKEMON_API}?q=${Search}&sortby=${SortBy}&orderby=${OrderBy}`
+    `${process.env.REACT_APP_POKEMON_API}?q=${Search}&sortby=${SortBy}&orderby=${OrderBy}&page=${Page}&itemsperpage=${ItemsPerPage}`
     : ""
     
     axios.get(API)
@@ -31,7 +33,7 @@ const  App = () =>  {
     }).catch(err =>{
       console.log(err);
     })
-  },[Search,SortBy,OrderBy]);
+  },[Search,SortBy,OrderBy,Page,ItemsPerPage]);
 
   const SetSeachQuery= (Search: string) =>{
     if(QueryTimeOut) clearTimeout(QueryTimeOut);
@@ -61,7 +63,7 @@ const  App = () =>  {
     <div className="App">
       <Header setDisplayCart={setDisplayCart} DisplayCart={DisplayCart} setSearch={SetSeachQuery}
        amountInCart={ShoppingCart.reduce<number>((acc: number,{Quantity}) => {return acc+Quantity}, 0)}/>
-      <CardList PokemonList={PokemonList} UpdateCart={UpdateCart}/>
+      <CardList PokemonList={PokemonList} UpdateCart={UpdateCart} AmountOfPokemon ={AmountOfPokemon} Page={Page} ItemsPerPage={ItemsPerPage} SetPage={SetPage}/>
       {DisplayCart ? (<Cart Cart={ShoppingCart} UpdateCart={UpdateCart}/>): null}
     </div>
   );
